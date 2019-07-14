@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript - form customer</title>	
+	<script src="js/jquery-3.4.1.js"></script>	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet">
+  <link href="css/ion.rangeSlider.min.css" rel="stylesheet">	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>		
+	<div class="container">
+		<h4>JavaScript - форма для создания заявки</h4>
+		<br>
+		<div class="row mb-3">
+			<div class="col-md-8">
+				<div class="col-md-10 py-3 rounded my-form-bg">
+					<form action="" method="post">
+						<div class="form-row">
+							<div class="col-md-12 mb-4">
+								<label for="validationServer01">Заголовок работы/услуги <small>(не менее 10 и не более 70 символов)</small></label>
+								<input type="text" id="validationServer01" class="form-control" name="head" value="">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+							<div class="col-md-12 mb-4">
+								<label>Марка транспортного средства</label>
+								<select class="form-control custom-select" name="marka">
+									<option value="0" selected>(Выберите марку)</option>
+									<option value="1">Abarth</option>
+									<option value="2">AC</option>
+									<option value="3">Acura</option>
+									<option value="4">Aixam</option>
+									<option value="5">Alfa Romeo</option>
+								</select>
+								<div class="invalid-feedback">
+								</div>
+							</div>
+							<div class="col-md-12 mb-2">
+								<label for="validationServer02">Описание работы/услуги <small>(не менее 50 и не более 1000 символов)</small></label>
+								<textarea class="form-control" id="validationServer02" name="textdesc"></textarea>
+								<div class="invalid-feedback">
+								</div>
+							</div>
+							<div class="top-price col-md-12 mb-4">
+								 <div class="demo__body">
+									<label for="range_slider" class="my-label-input my-4">Диапазон стоимости работ/услуг &nbsp;&nbsp;<span class="fa fa-rub" aria-hidden="true"></span></label>
+									<input id="range_slider" type="text" name="range_slider" value="">
+								</div>
+							</div>							
+							<div class="bott-price col-md-12 my-2">
+								<label for="result_sum">Результат выбора &nbsp;&nbsp;<span class="fa fa-rub" aria-hidden="true"></span></label>
+								<input id="result_sum" type="text" class="col-md-6 mb-4 form-control" name="res_sum" value="">
+								<div class="invalid-feedback">
+								</div>
+							</div>					
+							<div class="col-md-6 mb-4">
+								<label for="start_date" class="my-label-input">Дата начала работ:</label>
+								<input id="start_date" name="start_date" value="">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+							<div class="col-md-6 mb-4">
+								<label for="start_time" class="my-label-input">Время начала работ:</label>
+								<input id="start_time" name="start_time" value="">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+							<div class="col-md-6 mb-4">
+								<label for="end_date" class="my-label-input">Дата окончания работ:</label>
+								<input id="end_date" name="end_date" value="">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+							<div class="col-md-6 mb-4">
+								<label for="end_time" class="my-label-input">Время окончания работ:</label>
+								<input id="end_time" name="end_time" value="">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+							<div class="col-md-12 mb-4">
+								<label>Адрес (место) работ/услуг</label><span class="no-galca"></span>
+								<div class="my-map">
+									<div id="map"></div>
+								</div>
+								<input type="hidden" id="address" name="address" value="">
+              </div>				
+							<div class="col-md-6 mb-4">
+								<label for="validationServer06">Имя Фамилия</label>
+								<input type="text" class="form-control" id="validationServer06" name="name" value="">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+							<div class="col-md-6 mb-4">
+								<label for="validationServer07">E-mail</label>
+								<input type="email" class="form-control" id="validationServer07" name="email" value="">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+							<div class="col-md-6 mb-4">
+								<label for="phone">Телефон</label>
+								<input type="tel" class="form-control youtel" id="phone" name="phone" value="">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+							<div class="col-md-12 mb-4">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="customCheck1" name="check" checked>
+									<label class="custom-control-label" for="customCheck1">Я согласен с <a href="#">Правилами сайта</a></label>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<button class="btn ml-3 btn-primary" id="btnsub" name="submit">Submit form</button>
+								<input type="hidden" id="myhidden">
+							</div>
+							<input type="hidden"><!-- Не удалять, а то изчезнет кнопка -->
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>		
+	</div>	<!-- <div class="container"> -->	
+	<!-- Скрипт для выбора дат и времени -->		
+	<script src="js/timedatepicker.js" type="text/javascript"></script>
+	<!-- Скрипт для перевода сообщений -->
+	<script src="js/messages.ru-ru.js"></script>
+	<!-- Скрипт для ввода телефона -->
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/input-tel.js"></script>
+	<!-- Скрипт для ползунка выбора стоимости -->
+	<script src="js/ion.rangeSlider.min.js"></script>
+	<!-- Yandex maps + key -->
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=4ec81c0d-b936-4ef9-9e69-0af7cee7ee1e&lang=ru_RU" type="text/javascript"></script>
+	<!-- Yandex API JavaScript  -->
+	<script src="js/custom_search_results.js" type="text/javascript"></script>
+	<!-- Мой крипт для формы заказа/заявки работ/услуг -->
+	<script src="js/my-form-customer.js"></script>
+</body>
+</html>

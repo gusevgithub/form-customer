@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+
+.wrapper {
+	/*margin-left: 20px;*/
+}
+
+.reg {
+	width: 100%;
+	height: 25px;
+}
+
+header {
+	text-align: center;
+}
+
+.b-nav {
+	max-width: 980px;
+	min-height: 50px;
+	margin: 0 auto;
+}
+
+header nav {
+	text-align: left;
+	margin-top: 12px;
+}
+
+
+header nav ul {
+	display: inline-block;
+	vertical-align: top;
+	width: 70%;
+}
+
+header nav ul.balles {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 200px;
+	max-width: 250px;
+}
+
+ul.balles li  {
+	float: right;
+}
+
+li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+li a {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.slider {
+	height: 500px;
+	background-image: url('/images/mechanic_bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	
+}
+
+.slider .b-rgba {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-link-slider {
+	display: inline-block;
+	max-width: 520px;
+	min-width: 200px;
+	height: 64px;
+	line-height: 64px;
+	text-align: center;
+	padding: 20px;
+	color: #FFF;
+	font-weight: 400;
+	font-size: 30px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	background: #ea5bff;
+	background: linear-gradient(to bottom, #ea5bff, #7933ff);
+	border-radius: 10px;
+	box-shadow: 0 2px 0 #7933ff;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+h2 {
+	margin: 15px 0;
+	font-weight: 600;
+	color: #444;
+	font-size: 1.5em;
+	line-height: 1.4;
+}
+
+main {
+	width: 100%;
+	height: auto;
+}
+
+.form-customer {
+	margin-left: 20px;
+}
+
+footer {
+	width: 100%;
+	min-height: 200px;
+	background: silver;
+}
+
+.block-performs {
+	margin-top: 10px;
+}
+
+.perform {
+	margin-left: 10px;
+}
+
+h3 {
+	margin-top: 10px;
+}
+
+.attention_read,
+.personal_data {
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+}
+
+.indent {
+	height: 20px;
+}
+
+.bid {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 250px;
+	height: 100px;
+	background: silver;
+}
